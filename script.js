@@ -15,7 +15,7 @@ $(document).ready(function() {
 
     setTimeout(function() {
       $('.notification').removeClass('show');
-    }, 6000);
+    }, 5000);
   });
 
   function hourUpdater() {
@@ -41,7 +41,9 @@ $(document).ready(function() {
   }
   hourUpdater();
 
-  var interval = setInterval(hourUpdater,18000);
+  var interval = setInterval(hourUpdater,15000);
+
+  //$('#currentDay').text(moment().format('dddd, MMMM Do'));
   // take from local storage and display back in the textbox
 
   $('#9am .description').val(localStorage.getItem('9am'));
@@ -54,4 +56,6 @@ $(document).ready(function() {
   $('#4pm .description').val(localStorage.getItem('4pm'));
   $('#5pm .description').val(localStorage.getItem('5pm'));
   $('#6pm .description').val(localStorage.getItem('6pm'));
+
+  $('#currentDay').text(moment().format('dddd, MMMM Do'));
 });
