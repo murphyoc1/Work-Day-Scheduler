@@ -8,8 +8,7 @@ $(document).ready(function() {
     var time = $(this)
       .parent()
       .attr('id');
-    console.log(time)
-    console.log(value)
+
     localStorage.setItem(time, value);
 
     $('.notification').addClass('show');
@@ -43,5 +42,16 @@ $(document).ready(function() {
   hourUpdater();
 
   var interval = setInterval(hourUpdater,18000);
-  $('#9am .description').val(localStorage.getItem)('9am');
+  // take from local storage and display back in the textbox
+
+  $('#9am .description').val(localStorage.getItem('9am'));
+  $('#10am .description').val(localStorage.getItem('10am'));
+  $('#11am .description').val(localStorage.getItem('11am'));
+  $('#12am .description').val(localStorage.getItem('12am'));
+  $('#1pm .description').val(localStorage.getItem('1pm'));
+  $('#2pm .description').val(localStorage.getItem('2pm'));
+  $('#3pm .description').val(localStorage.getItem('3pm'));
+  $('#4pm .description').val(localStorage.getItem('4pm'));
+  $('#5pm .description').val(localStorage.getItem('5pm'));
+  $('#6pm .description').val(localStorage.getItem('6pm'));
 });
