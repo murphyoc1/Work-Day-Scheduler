@@ -1,20 +1,22 @@
 $(document).ready(function() {
 // save button
   $('.saveBtn').on('click', function() {
-    var task = $(this)
+    var value = $(this)
       .siblings('.description')
       .val();
     // adding task from the class description in textbox in html to local storage
     var time = $(this)
       .parent()
       .attr('id');
-    localStorage.setItem(time, task);
+    console.log(time)
+    console.log(value)
+    localStorage.setItem(time, value);
 
     $('.notification').addClass('show');
 
     setTimeout(function() {
       $('.notification').removeClass('show');
-    }, 5000);
+    }, 6000);
   });
 
   function hourUpdater() {
@@ -40,4 +42,6 @@ $(document).ready(function() {
   }
   hourUpdater();
 
+  var interval = setInterval(hourUpdater,18000);
+  $('#9am .description').val(localStorage.getItem)('9am');
 });
