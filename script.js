@@ -55,6 +55,5 @@ $(document).ready(function() {
   $('#hour-16 .event').val(localStorage.getItem('hour-16'));
   $('#hour-17 .event').val(localStorage.getItem('hour-17'));
   $('#hour-18 .event').val(localStorage.getItem('hour-18'));
-
   $('#currentDay').text(moment().format('dddd, MMMM Do'));
 });
