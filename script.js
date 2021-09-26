@@ -43,19 +43,18 @@ $(document).ready(function() {
 
   var interval = setInterval(hourUpdater,15000);
 
-  //$('#currentDay').text(moment().format('dddd, MMMM Do'));
   // take from local storage and display back in the textbox
 
-  $('#9am .description').val(localStorage.getItem('9am'));
-  $('#10am .description').val(localStorage.getItem('10am'));
-  $('#11am .description').val(localStorage.getItem('11am'));
-  $('#12am .description').val(localStorage.getItem('12am'));
-  $('#1pm .description').val(localStorage.getItem('1pm'));
-  $('#2pm .description').val(localStorage.getItem('2pm'));
-  $('#3pm .description').val(localStorage.getItem('3pm'));
-  $('#4pm .description').val(localStorage.getItem('4pm'));
-  $('#5pm .description').val(localStorage.getItem('5pm'));
-  $('#6pm .description').val(localStorage.getItem('6pm'));
+  $('#hour-9 .description').val(localStorage.getItem('hour-9'));
+  $('#hour-10 .description').val(localStorage.getItem('hour-10'));
+  $('#hour-11 .description').val(localStorage.getItem('hour-11'));
+  $('#hour-12 .description').val(localStorage.getItem('hour-12'));
+  $('#hour-13 .description').val(localStorage.getItem('hour-13'));
+  $('#hour-14 .description').val(localStorage.getItem('hour-14'));
+  $('#hour-15 .description').val(localStorage.getItem('hour-15'));
+  $('#hour-16 .description').val(localStorage.getItem('hour-16'));
+  $('#hour-17 .description').val(localStorage.getItem('hour-17'));
+  $('#hour-18 .description').val(localStorage.getItem('hour-18'));
 
   $('#currentDay').text(moment().format('dddd, MMMM Do'));
 });
